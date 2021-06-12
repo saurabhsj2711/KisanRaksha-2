@@ -1,0 +1,702 @@
+
+
+/* Main Structure */
+
+#login-container {
+    position: relative;
+    width: 30%;
+    left: 35%;
+    text-align: center;
+    z-index: 1000;
+    margin-top: 10%;
+    margin-bottom: 10%;
+
+}
+
+#login-container h1{
+color: ;
+}
+
+/* Blocks */
+.block {
+    margin: 0 0 10px;
+    padding: 20px 15px 1px;
+    background-color: #ffffff;
+    border-top-left-radius: 2px;
+    border-top-right-radius: 2px;
+    -webkit-box-shadow: 0 2px 0 rgba(218, 224, 232, .5);
+    box-shadow: 0 2px 0 rgba(218, 224, 232, .5);
+}
+
+.block .block {
+    border: 1px solid #dae0e8;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+
+.block.full {
+    padding: 20px 15px;
+}
+
+.block .block-content-full {
+    margin: -20px -15px -1px;
+}
+
+.block .block-content-mini-padding {
+    padding: 8px;
+}
+
+.block.full .block-content-full {
+    margin: -20px -15px;
+}
+
+.block-title {
+    margin: -20px -15px 20px;
+    border-bottom: 2px solid #dae0e8;
+    border-top-left-radius: 2px;
+    border-top-right-radius: 2px;
+    background: rgba(218, 224, 232, .15);
+}
+
+.block-title h1,
+.block-title h2,
+.block-title h3,
+.block-title h4,
+.block-title h5,
+.block-title h6 {
+    display: inline-block;
+    font-size: 14px;
+    line-height: 1.4;
+    margin: 0;
+    padding: 10px 15px 9px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.block-title h1 small,
+.block-title h2 small,
+.block-title h3 small,
+.block-title h4 small,
+.block-title h5 small,
+.block-title h6 small {
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.block-title .nav-tabs {
+    padding: 0;
+    margin: 0;
+    border-bottom: none;
+}
+
+.block-title .nav-tabs > li > a {
+    border: none;
+    min-height: 40px;
+    line-height: 40px;
+    padding-top: 0;
+    padding-bottom: 0;
+    margin: 0;
+    border-radius: 0;
+}
+
+.block-title .nav-tabs > li > a:hover {
+    background-color: #ffffff;
+}
+
+.block-title .nav-tabs > li.active > a,
+.block-title .nav-tabs > li.active > a:hover,
+.block-title .nav-tabs > li.active > a:focus {
+    border: none;
+    background-color: #dae0e8;
+}
+
+.block-options {
+    padding: 2px 3px;
+    height: 38px;
+}
+
+.block-options .label {
+    display: inline-block;
+    padding: 6px;
+    vertical-align: middle;
+    font-size: 14px;
+    margin-top: 4px;
+}
+
+.block-options .dropdown-menu {
+    margin-top: 3px;
+}
+
+.block-options .btn {
+    padding-right: 8px;
+    padding-left: 8px;
+    min-width: 34px;
+    text-align: center;
+    color: #454e59;
+    opacity: .4;
+    background: transparent;
+    border-color: transparent;
+    -webkit-transition: opacity .15s ease-out;
+    transition: opacity .15s ease-out;
+}
+
+.block-options .btn:hover,
+.block-options .btn:active,
+.block-options .btn.active,
+.block-options .btn:focus {
+    opacity: 1;
+}
+
+.block-options .btn i {
+    font-size: 14px;
+}
+
+.block-section {
+    margin-bottom: 20px;
+}
+
+.form-control:focus {
+    border-color: #a6ce39;
+}
+.csscheckbox {
+    margin: 1px 0;
+    padding: 7px 0;
+    position: relative;
+    cursor: pointer;
+    display: inline-block;
+    vertical-align: middle;
+    font-weight: 400;
+}
+
+.csscheckbox input {
+    position: absolute;
+    opacity: 0;
+}
+
+.csscheckbox span {
+    position: relative;
+    display: inline-block;
+    margin-top: -2px;
+    width: 20px;
+    height: 20px;
+    border-radius: 3px;
+    background: rgba(250, 250, 250, .25);
+    border: 1px solid #dae0e8;
+    vertical-align: middle;
+}
+
+.csscheckbox span:hover {
+    background: rgba(250, 250, 250, .75);
+}
+
+.csscheckbox span:after {
+    content: "";
+    position: absolute;
+    top: 3px;
+    right: 3px;
+    bottom: 3px;
+    left: 3px;
+    border-radius: 3px;
+    background-color: #ffffff;
+    opacity: 0;
+    -webkit-transition: all .15s ease-out;
+    transition: all .15s ease-out;
+    -webkit-transform: scale(.5);
+    transform: scale(.5);
+}
+
+.csscheckbox input:checked + span:after {
+    opacity: 1;
+    -webkit-transform: scale(1);
+    transform: scale(1);
+}
+
+.csscheckbox input:checked + span:after {
+    background-color: #eeeeee;
+}
+
+.csscheckbox-default input:checked + span:after {
+    background-color: #dae0e8;
+}
+
+.csscheckbox-warning input:checked + span:after {
+    background-color: #deb25c;
+}
+
+.csscheckbox-danger input:checked + span:after {
+    background-color: #de815c;
+}
+
+.csscheckbox-info input:checked + span:after {
+    background-color: #5cafde;
+}*/
+
+.csscheckbox-success input:checked + span:after {
+    background-color: #afde5c;
+}
+
+.csscheckbox-primary input:checked + span:after {
+    background-color: #a6ce39;
+}
+
+.btn-primary {
+    background-color: #a6ce39;
+    border-color: #a6ce39;
+}
+
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary.focus,
+.btn-primary:active,
+.btn-primary:active:hover,
+.btn-primary:active:focus,
+.btn-primary.active,
+.btn-primary.active:hover,
+.btn-primary.active:focus,
+.open .btn-primary.dropdown-toggle,
+.open .btn-primary.dropdown-toggle:hover,
+.open .btn-primary.dropdown-toggle:focus,
+.open .btn-primary.dropdown-toggle.focus {
+    background-color: #02aac4;
+    border-color: #02aac4;
+    color: #ffffff !important;
+}
+
+.btn-primary.disabled,
+.btn-primary.disabled:hover,
+.btn-primary.disabled:focus,
+.btn-primary.disabled:active,
+.btn-primary.disabled.active,
+.btn-primary[disabled]:hover,
+.btn-primary[disabled]:focus,
+.btn-primary[disabled].focus,
+.btn-primary[disabled]:active,
+.btn-primary[disabled].active,
+.btn-primary[disabled]:active:focus,
+.btn-primary[disabled].active:focus,
+fieldset[disabled] .btn-primary:hover,
+fieldset[disabled] .btn-primary:focus,
+fieldset[disabled] .btn-primary.focus,
+fieldset[disabled] .btn-primary:active,
+fieldset[disabled] .btn-primary.active,
+fieldset[disabled] .btn-primary:active:focus,
+fieldset[disabled] .btn-primary.active:focus {
+    background-color: #a6ce39;
+    border-color: #a6ce39;
+}
+
+.panel-default > .panel-heading {
+    background-color: #f9f9f9;
+}
+
+.panel-group {
+    margin-bottom: 20px;
+}
+
+
+/*////////////////////////////////// add solution/////////////////////////////////*/
+
+/* Blog Single CSS */
+.blog-single{
+	background:#fff;
+	padding:70px 0 100px;
+}
+.blog-single .blog-single-main {
+	margin-top: 30px;
+	background: #fff;
+}
+.blog-single .blog-detail {
+	background: #fff;
+}
+.blog-single .image{
+	position:relative;
+}
+.blog-single .image img{
+	width:100%;
+	height:100%;
+}
+.blog-single .blog-title {
+	font-size: 24px;
+	font-weight: 600;
+	text-transform: capitalize;
+	margin: 40px 0 15px 0;
+}
+.blog-single .blog-meta {
+	margin-bottom: 0;
+	overflow: hidden;
+	border-bottom: 1px solid #dddddd6e;
+	padding-bottom: 20px;
+	margin-bottom: 25px;
+}
+.blog-single .blog-meta .author i {
+	color: #F7941D;
+	margin-right: 10px;
+	font-size: 13px;
+}
+.blog-single .blog-meta .author a {
+	font-size: 13px;
+	border-right:1px solid #ddd;
+	padding:0px 15px;
+}
+.blog-single .blog-meta .author  a:first-child{
+	padding-left:0;
+}
+.blog-single .blog-meta .author  a:last-child{
+	padding-right:0;
+	border:none;
+}
+.blog-single .blog-meta span {
+	display: inline-block;
+	font-size: 14px;
+	color: #666;
+}
+.blog-single .blog-meta span a i {
+	margin-right: 10px;
+	color: #F7941D;
+}
+.blog-single .blog-meta span a:hover{
+	color:#F7941D;
+}
+.blog-single .content p {
+	margin-bottom: 25px;
+	line-height: 26px;
+}
+.blog-single .content p:last-child{
+	margin:0;
+}
+.blog-single blockquote {
+	position: relative;
+	font-size: 13px;
+	font-weight: 400;
+	padding-left: 20px;
+	padding: 10px 20px;
+	background: #F6F6F6;
+	padding: 30px 40px 30px 70px;
+	color: #555;
+	border: none;
+	margin-bottom: 25px;
+	border-left: 3px solid #F7941D;
+}
+.blog-single blockquote i {
+	font-size: 30px;
+	color: #F7941D;
+	position: absolute;
+	left: 20px;
+	top: 20px;
+}
+.blog-single .content .img-post{
+	margin-bottom: 25px;
+}
+.blog-single .share-social .content-tags {
+	position: relative;
+	margin-top: 25px;
+}
+.blog-single .share-social .content-tags h4 {
+	position: absolute;
+	left: 0;
+	top: 7px;
+	font-size: 15px;
+	font-weight: 500;
+}
+.blog-single .share-social .content-tags .tag-inner{
+	padding-left:60px;
+}
+.blog-single .share-social .content-tags .tag-inner li {
+	display: inline-block;
+	margin-right: 7px;
+	margin-bottom: 10px;
+	margin-top: 4px;
+}
+.blog-single .share-social .content-tags .tag-inner li:last-child{
+	margin-right: 0px;
+	margin-bottom: 0px;
+}
+.blog-single .share-social .content-tags .tag-inner li a {
+	border-radius: 30px;
+	padding: 5px 15px;
+	background:#f4f7fc;
+	font-size: 13px;
+}
+.blog-single .share-social .content-tags .tag-inner li a:hover{
+	color:#fff;
+	background:#F7941D;
+}
+/* Comments */
+.blog-single .comments{
+	margin-top:40px;
+}
+.blog-single .comments .comment-title {
+	position: relative;
+	font-size: 18px;
+	font-weight: 600;
+	text-transform: capitalize;
+	margin-bottom: 30px;
+	display: block;
+	background: #fff;
+	padding-left: 12px;
+}
+.blog-single .comments .comment-title:before{
+	position: absolute;
+	content: "";
+	left: 0;
+	bottom: -1px;
+	height: 100%;
+	width: 3px;
+	background:#F7941D;
+}
+.blog-single .comments{
+
+}
+.blog-single .comments .single-comment {
+	position: relative;
+	margin-bottom: 40px;
+	border-radius: 5px;
+	padding-left: 95px;
+}
+.blog-single .comments .single-comment.left{
+	margin-left:110px;
+}
+.blog-single .comments .single-comment img {
+	height: 70px;
+	width: 70px;
+	border-radius: 100%;
+	position: absolute;
+	left: 0;
+}
+.blog-single .single-comment .content {
+
+}
+.blog-single .single-comment .content h4 {
+	color: #333;
+	font-size: 16px;
+	font-weight: 500;
+	margin-bottom: 10px;
+	display: inline-block;
+	margin-bottom: 18px;
+	text-transform: capitalize;
+}
+.blog-single .single-comment .content h4 span {
+	display: inline-block;
+	font-size: 13px;
+	color: #8D8D8D;
+	margin: 0;
+	font-weight: 400;
+	text-transform: capitalize;
+	display: block;
+	margin-top: 5px;
+}
+.blog-single .single-comment .content p {
+	color: #666;
+	font-weight: 400;
+	display: block;
+	margin: 0;
+	margin-bottom: 20px;
+	line-height: 22px;
+}
+.blog-single .single-comment .content .button{}
+.blog-single .single-comment .content .btn {
+	display: inline-block;
+	color: #666;
+	font-weight: 400;
+	color: #6a6a6a;
+	border-radius: 4px;
+	text-transform: capitalize;
+	font-size: 14px;
+	background: transparent;
+	padding: 0;
+}
+.blog-single .single-comment .content a i{
+	display:inline-block;
+	margin-right:5px;
+}
+.blog-single .single-comment .content a:hover{
+	color:#F7941D;
+}
+/* Comment Form */
+.blog-single .reply form {
+	padding: 40px;
+	border: 1px solid #eee;
+}
+.blog-single .reply .reply-title {
+	position: relative;
+	font-size: 18px;
+	font-weight: 600;
+	text-transform: capitalize;
+	margin-bottom: 30px;
+	display: block;
+	background: #fff;
+	padding-left: 12px;
+}
+.blog-single .reply .reply-title:before{
+	position: absolute;
+	content: "";
+	left: 0;
+	bottom: -1px;
+	height: 100%;
+	width: 3px;
+	background:#F7941D;
+}
+.blog-single .reply .form-group {
+	margin-bottom: 20px;
+}
+.blog-single .reply .form-group input {
+	width: 100%;
+	height: 45px;
+	line-height: 50px;
+	padding: 0 20px;
+	border-radius: 0px;
+	color: #333 !important;
+	border: none;
+	border: 1px solid #eee;
+}
+.blog-single .reply .form-group textarea {
+	width: 100%;
+	height: 200px;
+	line-height: 50px;
+	padding: 0 20px;
+	border-radius: 0px;
+	color: #333 !important;
+	border: none;
+	border: 1px solid #eee;
+}
+.blog-single .reply .form-group label {
+	color: #333;
+	position: relative;
+}
+.blog-single .reply .form-group label span {
+	color:#ff2c18;
+	display: inline-block;
+	position: absolute;
+	right: -12px;
+	top: 4px;
+	font-size: 16px;
+}
+.blog-single .reply .button {
+	text-align: left;
+	margin-bottom:0px;
+}
+.blog-single .reply .button .btn {
+	height: 50px;
+	border: none;
+}
+/*======================================
+   End Shop Blog CSS
+========================================*/
+
+/*======================================
+  21. Contact CSS
+========================================*/
+.contact-us {
+	position: relative;
+	z-index: 43;
+}
+.contact-us .title{
+	margin-bottom: 30px;
+}
+.contact-us .title h4 {
+	font-size: 17px;
+	font-weight: 500;
+	margin-bottom: 5px;
+	color: #F7941D;
+}
+.contact-us .title h3 {
+	font-size: 25px;
+	text-transform: capitalize;
+	font-weight: 600;
+}
+.contact-us .single-head {
+	padding: 50px;
+	box-shadow: 0px 0px 15px #0000001a;
+	height: 100%;
+}
+.contact-us .single-info {
+	text-align: left;
+	margin-bottom:30px;
+}
+.contact-us .single-info i {
+	color: #fff;
+	font-size: 18px;
+	display: inline-block;
+	margin-bottom: 15px;
+	height: 40px;
+	width: 40px;
+	display: block;
+	text-align: center;
+	border-radius: 3px;
+	line-height: 40px;
+	background:#F7941D;
+}
+.contact-us .single-info ul
+.contact-us .single-info ul li{
+	margin-bottom:5px;
+}
+.contact-us .single-info ul li:last-child{
+	margin-bottom:0;
+}
+.contact-us .single-info ul li a{
+	font-weight:400;
+}
+.contact-us .single-info ul li a:hover{
+	color:#F7941D;
+}
+.contact-us .single-info .title {
+	margin-bottom: 10px;
+	font-weight: 500;
+	color: #333;
+	font-size: 18px;
+}
+.contact-us .form-main {
+	box-shadow: 0px 0px 15px #0000001a;
+	padding: 50px;
+}
+.contact-us .form .form-group input {
+	height: 48px;
+	line-height: 48px;
+	width: 100%;
+	border: 1px solid #e6e2f5;
+	padding: 0px 20px;
+	color: #333;
+	border-radius: 0px;
+	font-weight: 400;
+}
+.contact-us .form .form-group textarea {
+	height: 180px;
+	width: 100%;
+	border: 1px solid #e6e2f5;
+	padding: 15px 20px;
+	color: #333;
+	border-radius: 0px;
+	resize: none;
+	font-weight:400;
+}
+.contact-us .form .form-group label {
+	color: #333;
+	position: relative;
+}
+.contact-us .form .form-group label span {
+	color: #ff2c18;
+	display: inline-block;
+	position: absolute;
+	right: -12px;
+	top: 4px;
+	font-size: 16px;
+}
+.contact-us .form .button {
+	margin:0;
+}
+.contact-us .form .button .btn {
+	height: 50px;
+	border: none;
+}
+#myMap {
+	height: 500px;
+	width: 100%;
+}
+/*======================================
+  End Contact CSS
+========================================*/
+
+
+
+
+

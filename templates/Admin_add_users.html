@@ -1,0 +1,47 @@
+{% extends "Admin_base.html" %} {% block content %}
+
+<!--////////////////////Created by Omkar G. Date - 17/8/2020 /////////////////////// -->
+<div class="content">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-12">
+          <form id="RegisterValidation" action="" method="post">
+            <div class="card ">
+              <div class="card-header card-header-rose card-header-icon">
+                <div class="card-icon">
+                  <i class="material-icons">mail_outline</i>
+                </div>
+                <h4 class="card-title">Register Form</h4>
+              </div>
+              <div class="card-body ">
+                <div class="form-group">
+                    <label for="exampleName" class="bmd-label-floating"> Full Name *</label>
+                    <input type="name" name="name" class="form-control" id="exampleName" required="true">
+                </div>
+
+                <div class="form-group">
+                    <label for="exampleMobile" class="bmd-label-floating"> Mobile No. *</label>
+                  <input type="text" id="exampleMobile" name="mobile" class="form-control" maxlength="10" oninput="this.value=this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" placeholder="Mobile No..."  required>
+                </div>
+
+                <div class="form-group">
+                  <label for="exampleEmail" class="bmd-label-floating"> Email Address *</label>
+                  <input type="email" name="email" class="form-control" id="exampleEmail" required="true">
+                </div>
+                <div class="form-group">
+                  <label for="examplePassword" class="bmd-label-floating"> Password *</label>
+                  <input type="password" name="password" class="form-control" id="examplePassword" required="true" name="password">
+                </div>
+                <div class="category form-category">* Required fields</div>
+              </div>
+
+            <div class="card-footer ml-auto mr-auto">
+                <button type="submit" class="btn btn-rose">Register</button>
+            </div>
+
+            </div>
+          </form>
+        </div>
+
+
+{% endblock %}

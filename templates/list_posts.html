@@ -1,0 +1,38 @@
+{% extends "Admin_base.html" %} {% block content %}
+
+<!---------------------------Created By Omkar Gawali-------------------------------------->
+<div class="container-fluid">
+
+    <div class="section-title row text-center">
+                    <div class="col-md-8 offset-md-2">
+                        <h3>Posts</h3>
+                        <div class="row">
+                            {% for post in list_post %}
+                            <div class="col-lg-4 col-md-4 col-sm-12 col-10 d-block m-auto">
+                                <div class="card">
+                                     <img class = "card-img-top" src="{{ url_for('static', filename='posts/'+post.post_filename) }}" class="card-img img fluid"`>
+                                    <div class="card-body">
+                                        <h5 class="card-title"><b>{{post.post_heading}}</b></h5>
+                                        <p class = "card-text">by {{post.post_author}}</p>
+                                        <p class = "card-text">{{post.post_date}}</p>
+                                        <div class="row">
+                                            <div class="col-md-3"></div>
+                                        <div class="col-md-3">
+                                            <a href="/admin_post/{{post.post_heading}}/{{post.post_author}}"> <i class="material-icons">visibility</i></a>
+                                        </div>
+                                        <div class="col-md-3">
+                                            <a href="/admin_delete_post/{{post.post_heading}}/{{post.post_author}}"><i class="material-icons">delete</i></a>
+                                        </div>
+                                            </div>
+                                    </div>
+                                </div>
+                            </div>
+                            {% endfor %}
+
+
+                        </div>
+                    </div>
+    </div><!-- end title -->
+</div>
+
+{% endblock %}

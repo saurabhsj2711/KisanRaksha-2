@@ -1,0 +1,47 @@
+{% extends "base_after_login.html" %} {% block content %}
+    <!-- LOADER -->
+	<div id="preloader">
+		<div class="loader-container">
+			<div class="progress-br float shadow">
+				<div class="progress__item"></div>
+			</div>
+		</div>
+	</div>
+	<!-- END LOADER -->
+
+    <div class="all-title-box">
+		<div class="container text-center">
+			<h1>Image Classifier<span class="m_1">Just one click away to find the disease.</span></h1>
+		</div>
+	</div>
+
+<section class="section lb page-section">
+    <div class="container">
+    <form id="upload-file" method="post" enctype="multipart/form-data">
+        <label for="imageUpload" class="upload-label">
+            Choose...
+        </label>
+        <input type="file" name="file" id="imageUpload" accept=".png, .jpg, .jpeg">
+    </form>
+
+    <div class="image-section" style="display:none;">
+        <div class="img-preview">
+            <div id="imagePreview">
+            </div>
+        </div>
+        <div>
+            <button type="button" class="btn btn-primary btn-lg " id="btn-upload" >Upload</button>
+        </div>
+
+
+    </div>
+<div>
+            <a href="/disease-info" class="btn btn-primary btn-lg " id="btn-predict"  >Predict</a>
+        </div>
+    </div>
+    </section>
+
+
+
+
+{% endblock %}

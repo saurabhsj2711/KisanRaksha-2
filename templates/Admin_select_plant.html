@@ -1,0 +1,50 @@
+{% extends "Admin_base.html" %} {% block content %}
+
+<!--////////////////////Created by Omkar G. Date - 17/8/2020 /////////////////////// -->
+<div class="content">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="card">
+            <div class="card-header card-header-rose card-header-icon">
+              <div class="card-icon">
+                <i class="material-icons">assignment</i>
+              </div>
+              <h4 class="card-title">Disease List</h4>
+                <div class="text-right">
+                        <button type="button" rel="tooltip" class="btn btn-success">
+                          <a href="/add_plant" ><i class="material-icons">add_circle</i>Add Plant</a>
+                        </button>
+                </div>
+            </div>
+            <div class="card-body">
+              <div class="table-responsive">
+                <table class="table">
+                  <thead>
+                    <tr>
+                      <th class="text-center">Sr No.</th>
+                      <th>Plant Name</th>
+                        <th class="text-right">Actions</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                  {% for plant in list_plant %}
+                    <tr>
+                      <td class="text-center"></td>
+                      <td>{{plant["plant_name"]}}</td>
+                        <td class="td-actions text-right">
+                        <a href="/disease_list/{{plant.plant_name}}" class="btn btn-primary btn-round">Show Diseases</a>
+                      </td>
+                    </tr>
+                  {% endfor %}
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+</div>
+
+{% endblock %}

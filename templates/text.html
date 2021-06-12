@@ -1,0 +1,92 @@
+{% extends "base_after_login.html" %} {% block content %}
+<!-- LOADER -->
+	<div id="preloader">
+		<div class="loader-container">
+			<div class="progress-br float shadow">
+				<div class="progress__item"></div>
+			</div>
+		</div>
+	</div>
+	<!-- END LOADER -->
+
+<div class="textBox" id = "Heading">
+        <p><strong>{{ disease_data["disease_name"] }}</strong></p>
+        
+        <div class="table" id = "table">
+            <table style="width:100%">
+                <tr>
+                    <th><strong>Name : </strong></th>
+                    <td>{{ disease_data["disease_name"] }}</td>
+                </tr>
+
+                <tr>
+                    <th><strong>Caused by :</strong></th>
+                    <td>{{ disease_data["cause"] }}</td>
+                </tr>
+                
+                <tr>
+                    <th><strong>Foliar Symptoms: </strong></th>
+                    <td>{{ disease_data["symptoms"] }}</td>
+                </tr>
+
+            </table>
+
+        </div>
+
+            <!-- Start Small Banner  -->
+            <section class="small-banner section">
+                <div class="container-fluid">
+                    <div class="row" id="images">
+                        <!-- Single Banner  -->
+                        <div class="col-lg-4 col-md-6 col-12">
+                            <div class="single-banner">
+                                <img src="static/images/b1.png" alt="#">
+                                
+                            </div>
+                        </div>
+                        <!-- /End Single Banner  -->
+                        <!-- Single Banner  -->
+                        <div class="col-lg-4 col-md-6 col-12">
+                            <div class="single-banner">
+                                <img src="static/images/b2.png" alt="#">
+                                
+                            </div>
+                        </div>
+                        <!-- /End Single Banner  -->
+                        <!-- Single Banner  -->
+                        <div class="col-lg-4 col-12">
+                            <div class="single-banner tab-height">
+                                <img src="static/images/b3.png" alt="#">
+                               
+                            </div>
+                        </div>
+                        <!-- /End Single Banner  -->
+                    </div>
+                </div>
+            </section>
+            <!-- End Small Banner -->
+
+        <div class="table1" id ="table1">
+        <table style="width:100%">
+            <tr>
+                <th><strong>Management :</strong></th>
+                    <td>{{ disease_data["management"] }}</td>
+            </tr>
+
+            <tr>
+                    <th><strong>Diagnostic Note :</strong></th>
+                    <td>{{ disease_data["solution"] }}</td>
+            </tr>
+
+        </table>
+
+        </div>
+    <div class="text-center">
+
+            <a href="/crops" class="btn btn-primary btn-round mt-4" id="submitbtn" name="submit">Explore more</a>
+
+            </div>
+</div>
+
+
+{% endblock %}

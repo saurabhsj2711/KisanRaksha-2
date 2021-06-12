@@ -1,0 +1,77 @@
+{% extends "Admin_base.html" %} {% block content %}
+    <style>
+    .row {padding:10px;}
+    </style>
+
+<!--////////////////////Created by Omkar G. Date - 17/8/2020 /////////////////////// -->
+
+        <div class="content">
+            <div class="container-fluid">
+              <div class="row">
+                <div class="col-md-12">
+                    <form id="RegisterValidation" method="post">
+                        <div class="card ">
+                          <div class="card-header card-header-rose card-header-icon">
+                            <div class="card-icon">
+                              <i class="material-icons">add_circle</i>
+                            </div>
+                            <h4 class="card-title">Update Disease</h4>
+                             </div>
+                        <div class="card-body">
+
+                              <div class="row">
+                                <div class="col-md-12"><input type="text" value="{{results.disease_name}}" name="disease_name"
+                                        class="form-control name_list" />
+                                </div>
+                              </div>
+
+                    <div class="row">
+                        <div class="col-md-12"><input type="text" value="{{results.cause}}" name="causes" placeholder="Enter causes of disease"
+                                class="form-control name_list" />
+                        </div>
+
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <textarea class="form-control rounded-0" value="" name="symptoms" placeholder="Enter Symptoms"
+                                rows="6">{{results.symptoms}}</textarea>
+                        </div>
+
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <textarea class="form-control rounded-0" value="" name="management"
+                                placeholder="Enter Management required" rows="6">{{results.management}}</textarea>
+                        </div>
+
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <textarea class="form-control rounded-0"  value="" name="solution"
+                                placeholder="Enter Solution of disease" rows="6">{{results.solution}}</textarea>
+                        </div>
+
+                    </div>
+
+                </div>
+                <br />
+
+                <div class="row">
+                    <div class="col-md-6 text-right">
+                        <button class="btn btn-info" >Submit</button>
+                    </div>
+
+                </div>
+                          </div>
+
+                    </form>
+                </div>
+
+                </div>
+              </div>
+            </div>
+        </div>
+
+
+{% endblock %}
+

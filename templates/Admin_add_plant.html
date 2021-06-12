@@ -1,0 +1,62 @@
+    {% extends "Admin_base.html" %} {% block content %}
+
+    <style>
+    .row {padding:10px;}
+    </style>
+
+
+    <!--////////////////////Created by Omkar G. Date - 17/8/2020 /////////////////////// -->
+<div class="content">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-12">
+          <form id="RegisterValidation" method=post enctype=multipart/form-data>
+            <div class="card ">
+              <div class="card-header card-header-rose card-header-icon">
+                <div class="card-icon">
+                  <i class="material-icons">add_circle</i>
+                </div>
+                <h4 class="card-title">Add Plant</h4>
+              </div>
+              <div class="card-body ">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <input type="text" name="plant" placeholder="Enter plant name" class="form-control name_list" />
+                            </div>
+                         </div>
+
+
+                   <div class="row">
+                       <div class="col-md-12">
+                           <input type=file name=file1>
+                           <span style="color:red">*File name must be plant_name.jpg Eg.Cotton.jpg</span>
+                       </div>
+                   </div>
+
+                       <div class="row">
+                             <div class="col-md-12">
+                                 <input type=file name=file2>
+                                 <span style="color:red">*File name must be plant_name.h5 Eg. Cotton.h5</span>
+                             </div>
+                       </div>
+
+                    <div class="row">
+                        <div class="col-md-12">
+                            <button type="submit" rel="tooltip" class="btn btn-info">
+                              <i class="material-icons">send</i>
+                            </button>
+                        </div>
+                    </div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+</div>
+
+
+
+
+
+            {% endblock %}

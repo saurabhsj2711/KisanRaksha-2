@@ -1,0 +1,241 @@
+ {% extends "base.html" %} {% block content %}
+
+    <!-- LOADER -->
+	<div id="preloader">
+		<div class="loader-container">
+			<div class="progress-br float shadow">
+				<div class="progress__item"></div>
+			</div>
+		</div>
+	</div>
+	<!-- END LOADER -->
+
+
+        <div id="carouselExampleControls" class="carousel slide bs-slider box-slider" data-ride="carousel" data-pause="hover" data-interval="false" >
+            <div class="carousel-inner" role="listbox">
+                <div class="carousel-item active">
+                    <div id="home" class="first-section" style="background-image:url('static/images/slider-01.jpg');">
+                        <div class="dtab">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-md-12 col-sm-12 text-right">
+                                        <div class="big-tagline">
+                                            <h2><strong>KISAN RAKSHA</strong> Your Crop Doctor</h2>
+                                            <p class="lead">With good & effective content </p>
+                                                <a href="/register" class="hover-btn-new"><span>Register</span></a>
+                                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                <a href="/log_in" class="hover-btn-new"><span>LOGIN</span></a>
+                                        </div>
+                                    </div>
+                                </div><!-- end row -->
+                            </div><!-- end container -->
+                        </div>
+                    </div><!-- end section -->
+                </div>
+            </div>
+        </div>
+
+<section class="section page-section">
+     <div class="container">
+        <div class="row">
+            <div class="col-4 bg-powderblue">
+                <p class="search-header my-1">Search for a city</p>
+                <div class="input-group mb-3">
+                    <input id="city-input" type="text" class="form-control" value="pune" placeholder="Enter city name" aria-label="Enter city name">
+                    <div class="input-group-append">
+                        <button class="btn btn-primary" type="button" id="search-button">
+                            <i class="fas fa-search"></i>
+                        </button>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-sm-12 text-center">
+                            <caption><h3 >Icon list<a href="#Icon-list" ></a></h3></caption>
+                            <table class="table table-bordered">
+                                <tr>
+                                    <th>Day icon</th>
+                                    <th>Night icon</th>
+                                    <th>Description</th>
+                                </tr>
+                                <tr>
+                                    <td><img src="http://openweathermap.org/img/wn/01d@2x.png" width="50px" height="50px" alt="" />  </td>
+                                    <td><img src="http://openweathermap.org/img/wn/01n@2x.png" width="50px" height="50px" alt="" />  </td>
+                                    <td> clear sky</td>
+                                </tr>
+                                <tr>
+                                    <td><img src="http://openweathermap.org/img/wn/02d@2x.png" width="50px" height="50px" alt="" /> </td>
+                                    <td><img src="http://openweathermap.org/img/wn/02n@2x.png" width="50px" height="50px" alt="" />  </td>
+                                    <td> few clouds </td>
+                                </tr>
+                                <tr>
+                                    <td><img src="http://openweathermap.org/img/wn/03d@2x.png" width="50px" height="50px" alt="" />  </td>
+                                    <td><img src="http://openweathermap.org/img/wn/03n@2x.png" width="50px" height="50px" alt="" />  </td>
+                                    <td> scattered clouds </td>
+                                </tr>
+                                <tr>
+                                    <td><img src="http://openweathermap.org/img/wn/04d@2x.png" width="50px" height="50px" alt="" /> </td>
+                                    <td><img src="http://openweathermap.org/img/wn/04n@2x.png" width="50px" height="50px" alt="" />  </td>
+                                    <td> broken clouds </td>
+                                </tr>
+                                <tr>
+                                    <td><img src="http://openweathermap.org/img/wn/09d@2x.png" width="50px" height="50px" alt="" />  </td>
+                                    <td><img src="http://openweathermap.org/img/wn/09n@2x.png" width="50px" height="50px" alt="" />  </td>
+                                    <td> shower rain </td>
+                                </tr>
+                                <tr>
+                                    <td><img src="http://openweathermap.org/img/wn/10d@2x.png" width="50px" height="50px" alt="" />  </td>
+                                    <td><img src="http://openweathermap.org/img/wn/10n@2x.png" width="50px" height="50px" alt="" />  </td>
+                                    <td> rain </td>
+                                </tr>
+                                <tr>
+                                    <td><img src="http://openweathermap.org/img/wn/11d@2x.png" width="50px" height="50px" alt="" />  </td>
+                                    <td><img src="http://openweathermap.org/img/wn/11n@2x.png" width="50px" height="50px" alt="" />  </td>
+                                    <td> thunderstorm </td>
+                                </tr>
+                                <tr>
+                                    <td><img src="http://openweathermap.org/img/wn/13d@2x.png" width="50px" height="50px" alt="" />  </td>
+                                    <td><img src="http://openweathermap.org/img/wn/13n@2x.png" width="50px" height="50px" alt="" />  </td>
+                                    <td> snow  </td>
+                                </tr>
+                                <tr>
+                                    <td><img src="http://openweathermap.org/img/wn/50d@2x.png" width="50px" height="50px" alt="" />  </td>
+                                    <td><img src="http://openweathermap.org/img/wn/50n@2x.png" width="50px" height="50px" alt="" />  </td>
+                                    <td> mist </td>
+                                </tr>
+                            </table>
+
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+            <div class="col-8">
+                <div class="row mr-0">
+                    <div class="col-12 border border-dark m-3 rounded">
+                        <div class="row">
+                            <div class="col-12">
+                                <span id="city-name" class="city-name align-middle"></span>
+                                <img id="current-pic" src="placeholder" alt="">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12">
+                                <p id="temperature"></p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12">
+                                <p id="humidity"></p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12">
+                                <p id="wind-speed"></p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12 d-flex">
+                                <p id="UV-index"></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <h3>5-Day Forecast</h3>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col forecast bg-primary text-white ml-3 mb-3 rounded"></div>
+                    <div class="col forecast bg-primary text-white ml-3 mb-3 rounded"></div>
+                    <div class="col forecast bg-primary text-white ml-3 mb-3 rounded"></div>
+                    <div class="col forecast bg-primary text-white ml-3 mb-3 rounded"></div>
+                    <div class="col forecast bg-primary text-white ml-3 mb-3 rounded"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <section class="section lb page-section">
+		<div class="container">
+			 <div class="section-title row text-center">
+                <div class="col-md-8 offset-md-2">
+                    <h3>Crops</h3>
+                    <div class="row">
+                        {% for plant in list_plants %}
+                        <div class="col-lg-4 col-md-4 col-sm-12 col-10 d-block m-auto">
+                            <div class="card">
+                                 <img src="{{ url_for('static', filename='images/'+plant.plant_name+'.jpg') }}" class="card-img img fluid"`>
+                                <div class="card-body">
+                                    <h2 class="card-title">{{plant.plant_name}}</h2>
+                                    <a href="/upload_image/{{plant.plant_name}}" class="btn btn-primary">Predict</a>
+                                </div>
+                            </div>
+                        </div>
+                        {% endfor %}
+
+
+                    </div>    
+                </div>
+            </div><!-- end title -->
+
+        </div>
+	</section>		
+    
+
+<section>   
+    <div id="StudyMaterials" class="parallax section db parallax-off" style="background-image:url('static/images/parallax_04.jpg');">
+        <div class="container">
+            <div class="section-title text-center">
+                <h3>About</h3>
+            </div><!-- end title -->
+    
+            <div class="row align-items-center">
+                <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12">
+                    <div class="message-box1">
+                        <h4>2021 BEST KISAN RAKSHA</h4>
+                        <h2>Welcome to KISAN RAKSHA Your Crop Doctor</h2>
+                        <p>Our aim is to enable farmers to work more productively and profitably, to secure their livelihood and to keep their risk as low as possible.</p>
+
+                        <p> The KisanRaksha is specialized for all major crops, available in many languages and easy-to-use. This makes KisanRaksha best agricultural web app for disease detection, pest control and yield increase.</p>
+
+                        <a href="/about" class="hover-btn-new orange"><span>Learn More</span></a>
+                    </div><!-- end messagebox -->
+                </div><!-- end col -->
+				
+				<div class="col-xl-6 col-lg-6 col-md-12 col-sm-12">
+                    <div class="post-media wow fadeIn">
+                         <img src="{{ url_for('static', filename='images/about-02.jpg') }}" class="img-fluid img-rounded">
+                    </div><!-- end media -->
+                </div><!-- end col -->
+			</div>
+			<div class="row align-items-center">
+				<div class="col-xl-6 col-lg-6 col-md-12 col-sm-12">
+                    <div class="post-media wow fadeIn">
+                        <img src="{{ url_for('static', filename='images/about_03.jpg') }}" class="img-fluid img-rounded">
+                    </div><!-- end media -->
+                </div><!-- end col -->
+				
+				<div class="col-xl-6 col-lg-6 col-md-12 col-sm-12">
+                    <div class="message-box1">
+                        <h2>Our Motivation</h2>
+                        <ul style="color:white">
+                            <li>Traditional approach for plant disease detection</li>
+                            <li>Farmers are unaware of some diseases</li>
+                            <li>Disease detection in plants plays an important role in agriculture field</li>
+                            <li>Less productivity affects farmers income</li>
+                            <li>Farmers suicide</li>
+                        </ul>
+
+                        <a href="/about" class="hover-btn-new orange"><span>Learn More</span></a>
+                    </div><!-- end messagebox -->
+                </div><!-- end col -->
+				
+            </div><!-- end row -->
+        </div>
+    </div>    
+</section>   
+
+{% endblock %}

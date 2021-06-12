@@ -1,0 +1,67 @@
+ {% extends "base.html" %} {% block content %}
+    <!-- LOADER -->
+	<div id="preloader">
+		<div class="loader-container">
+			<div class="progress-br float shadow">
+				<div class="progress__item"></div>
+			</div>
+		</div>
+	</div>
+	<!-- END LOADER -->	
+	
+
+    <div class="all-title-box">
+		<div class="container text-center">
+			<h1>About Us</h1>
+		</div>
+	</div>
+
+    <section> 
+        <div id="overviews" class="section lb">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12">
+                        <div class="message-box">
+                           <h4>2021 BEST KISAN RAKSHA</h4>
+                        <h2>Welcome to KISAN RAKSHA Your Crop Doctor</h2>
+
+                            <p>Our aim is to enable farmers to work more productively and profitably, to secure their livelihood and to keep their risk as low as possible.</p>
+                            <p> The KisanRaksha is specialized for all major crops, available in many languages and easy-to-use. This makes KisanRaksha best agricultural web app for disease detection, pest control and yield increase.</p>
+
+                            <a href="/about" class="hover-btn-new orange"><span>Learn More</span></a>
+                        </div><!-- end messagebox -->
+                    </div><!-- end col -->
+                    
+                    <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12">
+                        <div class="post-media wow fadeIn">
+                             <img src="{{ url_for('static', filename='images/about-02.jpg') }}" class="img-fluid img-rounded">
+                        </div><!-- end media -->
+                    </div><!-- end col -->
+                </div>
+                <div class="row align-items-center">
+                    <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12">
+                        <div class="post-media wow fadeIn">
+                             <img src="{{ url_for('static', filename='images/about_03.jpg') }}" class="img-fluid img-rounded">
+                        </div><!-- end media -->
+                    </div><!-- end col -->
+                    
+                    <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12">
+                        <div class="message-box">
+                            <h2>Our Motivation</h2>
+                                <ul>
+                                    <li>Traditional approach for plant disease detection</li>
+                                    <li>Farmers are unaware of some diseases</li>
+                                    <li>Disease detection in plants plays an important role in agriculture field</li>
+                                    <li>Less productivity affects farmers income</li>
+                                    <li>Farmers suicide</li>
+                                </ul>
+                            <a href="/about" class="hover-btn-new orange"><span>Learn More</span></a>
+                        </div><!-- end messagebox -->
+                    </div><!-- end col -->
+                    
+                </div><!-- end row -->
+            </div>
+        </div>    
+    </section>  
+
+ {% endblock %}

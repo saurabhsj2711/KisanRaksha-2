@@ -1,0 +1,42 @@
+{% extends "Admin_base.html" %} {% block content %}
+
+<!--////////////////////Created by Omkar G. Date - 17/8/2020 /////////////////////// -->
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-12">
+          <form id="RegisterValidation" action="" method="post">
+            <div class="card ">
+              <div class="card-header card-header-rose card-header-icon">
+                <div class="card-icon">
+                  <i class="material-icons">mail_outline</i>
+                </div>
+                <h4 class="card-title">Update User</h4>
+              </div>
+              <div class="card-body ">
+                <div class="form-group">
+                    <label for="exampleName" class="bmd-label-floating"> Full Name *</label>
+                    <input type="name" value="{{results.name}}" name="name" class="form-control" id="exampleName" required="true">
+                </div>
+
+                <div class="form-group">
+                    <label for="exampleMobile" class="bmd-label-floating"> Mobile No. *</label>
+                    <input type="mob_no" value="{{results.mobile_no}}" name="mobile" class="form-control" id="exampleMobile" required="true">
+                </div>
+
+                <div class="form-group">
+                  <label for="exampleEmail" class="bmd-label-floating"> Email Address *</label>
+                  <input type="email" name="email" value="{{results.email_id }}" class="form-control" id="exampleEmail" required="true">
+                </div>
+
+            <div class="card-footer ml-auto mr-auto">
+                <button type="submit" class="btn btn-rose">Update</button>
+            </div>
+
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+
+{% endblock %}

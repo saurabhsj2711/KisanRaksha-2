@@ -1,0 +1,69 @@
+.textBox{
+    margin: 4em;
+}
+
+.table
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-collapse: collapse;
+}
+.table tr,th{
+    border: 1px solid black;
+
+}
+
+.table td{
+    padding: 2rem;
+}
+
+.table th{
+    text-align: center;
+}
+
+.table1
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-collapse: collapse;
+    padding-top: 5rem;
+}
+.table1 tr,th{
+    border: 1px solid black;
+
+}
+
+.table1 td{
+    padding: 2rem;
+}
+
+.table1 th{
+    text-align: center;
+}
+
+
+/*======================================
+   Start Small Banner CSS
+========================================*/
+.small-banner{
+    padding:30px 0;
+    padding-bottom:0;
+}
+.small-banner .single-banner {
+    overflow:hidden;
+    position:relative;
+}
+.small-banner .single-banner img{
+    height:100%;
+    width:100%;
+    -webkit-transition:all 0.4s ease;
+    -moz-transition:all 0.4s ease;
+    transition:all 0.4s ease;
+}
+
+
+/*======================================
+   End Small Banner CSS
+========================================*/

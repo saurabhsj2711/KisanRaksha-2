@@ -1,0 +1,52 @@
+{% extends "Admin_base.html" %} {% block content %}
+
+<!--////////////////////Created by Omkar G. Date - 17/8/2020 /////////////////////// -->
+<div class="content">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="card">
+            <div class="card-header card-header-rose card-header-icon">
+              <div class="card-icon">
+                <i class="material-icons">assignment</i>
+              </div>
+              <h4 class="card-title">Queries List</h4>
+            </div>
+            <div class="card-body">
+              <div class="table-responsive">
+                <table class="table">
+                  <thead>
+                    <tr>
+                      <th class="text-center">Sr No.</th>
+                      <th>Name</th>
+                      <th>Email Id</th>
+                      <th class="text-right">Actions</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                  {% for query in list_queries %}
+                    <tr>
+                      <td class="text-center"></td>
+                      <td>{{query["username"]}}</td>
+                      <td>{{query["user_mail"]}}</td>
+                      <td class="td-actions text-right">
+                        <button type="button" rel="tooltip" class="btn btn-info">
+                          <a href="/replies_list/{{query.user_mail}}/{{query.query}}">
+                          <i class="material-icons">quickreply</i>
+                          </a>
+                        </button>
+
+                      </td>
+                    </tr>
+                  {% endfor %}
+                  </tbody>
+
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+ 
+
+ 
+{% endblock %}

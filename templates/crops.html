@@ -1,0 +1,47 @@
+ {% extends "base_after_login.html" %} {% block content %}
+
+    <!-- LOADER -->
+	<div id="preloader">
+		<div class="loader-container">
+			<div class="progress-br float shadow">
+				<div class="progress__item"></div>
+			</div>
+		</div>
+	</div>
+	<!-- END LOADER -->	
+	
+
+    <div class="all-title-box">
+		<div class="container text-center">
+			<h1>Crops<span class="m_1"></span></h1>
+		</div>
+	</div>
+
+    
+    <section class="section lb page-section">
+		<div class="container">
+			 <div class="section-title row text-center">
+                <div class="col-md-8 offset-md-2">
+                    <h3>Crops</h3>
+                    <div class="row">
+                        {% for plant in list_plants %}
+                        <div class="col-lg-4 col-md-4 col-sm-12 col-10 d-block m-auto">
+                            <div class="card">
+                                 <img src="{{ url_for('static', filename='images/'+plant.plant_name+'.jpg') }}" class="card-img img fluid"`>
+                                <div class="card-body">
+                                    <h2 class="card-title">{{plant.plant_name}}</h2>
+                                    <a href="/upload_image/{{plant.plant_name}}" class="btn btn-primary">Predict</a>
+                                </div>
+                            </div>
+                        </div>
+                        {% endfor %}
+
+
+                    </div>
+                </div>
+            </div><!-- end title -->
+        </div>
+	</section>
+
+ {% endblock %}
+    

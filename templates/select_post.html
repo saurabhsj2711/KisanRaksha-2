@@ -1,0 +1,54 @@
+ {% extends "base_card.html" %} {% block content %}
+
+<section class="blog-single section-lb">
+			<div class="container">
+        <div class="row">
+        {% for post in list_post %}
+                          <div class="col-md-4">
+                            <div class="card card-product">
+                              <div class="card-header card-header-image" data-header-animation="true">
+                                <a href="#pablo">
+                                  <img class="img" src="{{ url_for('static', filename='posts/'+post.post_filename) }}" >
+                                </a>
+                              </div>
+                              <div class="card-body">
+                                <div class="card-actions text-center">
+                                  <button type="button" class="btn btn-danger btn-link fix-broken-card">
+                                    <i class="material-icons">build</i> Fix Header!
+                                  </button>
+
+                                </div>
+                                <h4 class="card-title">
+                                  <a href="#pablo">{{post.post_heading}}</a>
+                                </h4>
+                                <div class="card-description">
+                                  by {{post.post_author}}
+                                </div>
+                              </div>
+                              <div class="card-footer">
+                                <div class="price">
+                                    <a href="/post/{{post.post_heading}}/{{post.post_author}}">
+                                        <button type="button" class="btn btn-primary btn-round">
+                                        <i class="material-icons">visibility</i> view post
+                                        </button>
+                                    </a>
+                                </div>
+                                <div class="stats">
+                                  <p class="card-category"><i class="material-icons">date_range</i>{{post.post_date}}</p>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+
+       {% endfor %}
+        </div>
+                        </div>
+        </section>
+
+ {% endblock %}
+
+
+
+
+
+    

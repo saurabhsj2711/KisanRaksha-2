@@ -1,0 +1,154 @@
+{% extends "base_login.html" %} {% block content %}
+
+	<div class="page-header register-page header-filter" filter-color="black"
+         style="background-image: url('./static/images/register.jpg')">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-10 ml-auto mr-auto">
+            <div class="card card-signup">
+              <h2 class="card-title text-center">Register</h2>
+              <div class="card-body">
+                <div class="row">
+                  <div class="col-md-5 ml-auto">
+                    <div class="info info-horizontal">
+                      <div class="icon icon-rose">
+                        <i class="material-icons">image_search</i>
+                      </div>
+                      <div class="description">
+                        <h4 class="info-title">Realtime Disease Prediction</h4>
+                        <p class="description">
+                          Just upload an image and in one click get realtime disease prediction with solutions
+                        </p>
+                      </div>
+                    </div>
+                    <div class="info info-horizontal">
+                      <div class="icon icon-primary">
+                        <i class="material-icons">person_pin</i>
+                      </div>
+                      <div class="description">
+                        <h4 class="info-title">Expert Advice</h4>
+                        <p class="description">
+                          24x7 help from agricultural experts with free of cost
+                        </p>
+                      </div>
+                    </div>
+                    <div class="info info-horizontal">
+                      <div class="icon icon-info">
+                        <i class="material-icons">tips_and_updates</i>
+                      </div>
+                      <div class="description">
+                        <h4 class="info-title">Benefits</h4>
+                        <p class="description">
+                          Get instant weather forecast details of your place and built knowledge by reading our knowledgeable posts
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-5 mr-auto">
+                    <div class="social text-center">
+                      <button class="btn btn-just-icon btn-round btn-twitter">
+                        <i class="fa fa-twitter"></i>
+                      </button>
+                      <button class="btn btn-just-icon btn-round btn-dribbble">
+                        <i class="fa fa-dribbble"></i>
+                      </button>
+                      <button class="btn btn-just-icon btn-round btn-facebook">
+                        <i class="fa fa-facebook"> </i>
+                      </button>
+                      <h4 class="mt-3"> or be classical </h4>
+                    </div>
+                    <form class="form" role="Form" method="post" action="" accept-charset="UTF-8">
+                      <div class="form-group has-default">
+                        <div class="input-group">
+                          <div class="input-group-prepend">
+                            <span class="input-group-text">
+                              <i class="material-icons">face</i>
+                            </span>
+                          </div>
+                          <input type="text" id="name" name="name" class="form-control" placeholder="Name..." required>
+                        </div>
+                      </div>
+
+						<div class="form-group has-default">
+                        <div class="input-group">
+                          <div class="input-group-prepend">
+                            <span class="input-group-text">
+                              <i class="material-icons">smartphone</i>
+                            </span>
+                          </div>
+                          <input type="text" id="mobile" name="mobile" class="form-control" maxlength="10" oninput="this.value=this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" placeholder="Mobile No..."  required>
+                        </div>
+                      </div>
+
+                      <div class="form-group has-default">
+                        <div class="input-group">
+                          <div class="input-group-prepend">
+                            <span class="input-group-text">
+                              <i class="material-icons">mail</i>
+                            </span>
+                          </div>
+                          <input type="email" id="email" name="email" class="form-control" placeholder="Email..." required>
+                        </div>
+                      </div>
+                      <div class="form-group has-default">
+                        <div class="input-group">
+                          <div class="input-group-prepend">
+                            <span class="input-group-text">
+                              <i class="material-icons">lock_outline</i>
+                            </span>
+                          </div>
+                          	<input type="password" id="password" name="password" placeholder="Password..." class="form-control" required>
+                        </div>
+
+                         <div class="form-group has-default">
+                          <div class="input-group">
+                            <div class="input-group-prepend">
+                               <span class="input-group-text"></span>
+                                <input type="checkbox" onclick="Toggle()">
+                              <label>Show Password</label>
+                            </div>
+                          </div>
+                         </div>
+                      </div>
+
+                      <div class="form-check">
+                        <label class="form-check-label">
+                          <input class="form-check-input" type="checkbox" value="" checked="">
+                          <span class="form-check-sign">
+
+                            <span class="check"></span>
+                          </span>
+                          I agree to the
+                          <a href="#something">terms and conditions</a>.
+                        </label>
+                      </div>
+                      <div class="text-center">
+						  <button type="submit" class="btn btn-primary btn-round mt-4" id="submitbtn" name="submit">Get Started</button>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+	  </div>
+	</div>
+
+
+
+ <script>
+// Change the type of input to password or text
+        function Toggle() {
+            var temp = document.getElementById("password");
+            if (temp.type === "password") {
+                temp.type = "text";
+            }
+            else {
+                temp.type = "password";
+            }
+        }
+
+</script>
+
+ {% endblock %}

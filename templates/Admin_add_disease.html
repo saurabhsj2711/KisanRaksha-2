@@ -1,0 +1,79 @@
+{% extends "Admin_base.html" %} {% block content %}
+<style>
+    .row {
+        padding: 10px;
+    }
+</style>
+
+<div class="content">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-12">
+          <form name="add_skills" id="add_skills">
+            <div class="card ">
+              <div class="card-header card-header-rose card-header-icon">
+                <div class="card-icon">
+                  <i class="material-icons">add_circle</i>
+                </div>
+                <h4 class="card-title">Add Disease</h4>
+              </div>
+              <div class="card-body ">
+                <div id="InputsWrapper" >
+                    <div class="row">
+                        <div class="col-md-12"><input type="text" name="disease_name[]" placeholder="Enter Disease name"
+                                class="form-control name_list" />
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-12"><input type="text" name="causes[]" placeholder="Enter causes of disease"
+                                class="form-control name_list" />
+                        </div>
+
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <textarea class="form-control rounded-0" name="symptoms[]" placeholder="Enter Symptoms"
+                                rows="6"></textarea>
+                        </div>
+
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <textarea class="form-control rounded-0" name="management[]"
+                                placeholder="Enter Management required" rows="6"></textarea>
+                        </div>
+
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <textarea class="form-control rounded-0" name="solution[]"
+                                placeholder="Enter Solution of disease" rows="6"></textarea>
+                        </div>
+
+                    </div>
+
+                </div>
+                <br />
+
+                <div class="row">
+                    <div class="col-md-6 text-right">
+                        <input type="button" name="submit" id="submit" class="btn btn-info" value="Submit" />
+                    </div>
+
+                    <div class="col-md-6">
+                        <button type="button" name="add" id="AddMoreFileBox"
+                            class="btn btn-success">Add More</button>
+                    </div>
+
+                </div>
+              </div>
+        </div>
+          </form>
+        </div>
+      </div>
+    </div>
+</div>
+
+
+    {% endblock %}

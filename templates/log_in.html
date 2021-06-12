@@ -1,0 +1,121 @@
+ {% extends "base_login.html" %} {% block content %}
+
+<!--///////////////////////////Created By Omkar Gawali/////////////////////////////////-->
+
+
+        <div class="page-header login-page header-filter" filter-color="black"
+
+            style="background-image: url('./static/images/slider-01.jpg'); background-size: cover; background-position: top center;">
+            <!--   you can change the color of the filter page using: data-color="blue | purple | green | orange | red | rose " -->
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-4 col-md-6 col-sm-8 ml-auto mr-auto">
+                        <form class="form" method="post" action="">
+                            <div class="card card-login card-hidden">
+                                <div class="card-header card-header-rose text-center">
+                                    <h4 class="card-title">Login</h4>
+                                    <div class="social-line">
+                                        <a href="#pablo" class="btn btn-just-icon btn-link btn-white">
+                                            <i class="fa fa-facebook-square"></i>
+                                        </a>
+                                        <a href="#pablo" class="btn btn-just-icon btn-link btn-white">
+                                            <i class="fa fa-twitter"></i>
+                                        </a>
+                                        <a href="#pablo" class="btn btn-just-icon btn-link btn-white">
+                                            <i class="fa fa-google-plus"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="card-body ">
+                                    <p class="card-description text-center">Or Be Classical</p>
+                                    <span class="bmd-form-group">
+                                        <div class="input-group">
+                                            <div class="input-group-prepend">
+                                                <span class="input-group-text">
+                                                    <i class="material-icons">email</i>
+                                                </span>
+                                            </div>
+                                            <input type="text" id="username" name="username" class="form-control" placeholder="enter username">
+                                        </div>
+                                    </span>
+                                    <span class="bmd-form-group">
+                                        <div class="input-group">
+                                            <div class="input-group-prepend">
+                                                <span class="input-group-text">
+                                                    <i class="material-icons">lock_outline</i>
+                                                </span>
+                                            </div>
+                                              <input type="password" id="password" name="password" class="form-control" placeholder="enter password">
+                                        </div>
+                                    </span>
+
+                                    <span class="bmd-form-group">
+                                        <div class="input-group">
+                                            <div class="input-group-prepend">
+                                                <span class="input-group-text"/>
+                                                 <input type="checkbox" onclick="Toggle()">Show Password
+                                                <a href="/register" style="margin-left:3rem">Create Account</a>
+
+                                            </div>
+                                        </div>
+                                    </span>
+
+                                </div>
+                                <div class="card-footer justify-content-center">
+                                    <button type="submit" class="btn btn-primary btn-round mt-4" id="submitbtn" name="submit">Lets Go</button>
+                                </div>
+                            </div>
+                            <!--                ########################################## -->
+                <div class="modal" id="myModal">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+
+                      <!-- Modal Header -->
+                      <div class="modal-header">
+                        <h4 class="modal-title">Modal Heading</h4>
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                      </div>
+
+                      <!-- Modal body -->
+                      <div class="modal-body">
+                        {{ msg }}
+                      </div>
+
+                      <!-- Modal footer -->
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                      </div>
+
+                    </div>
+                  </div>
+                </div>
+<!--                #################################################-->
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+
+ <script>
+// Change the type of input to password or text
+        function Toggle() {
+            var temp = document.getElementById("password");
+            if (temp.type === "password") {
+                temp.type = "text";
+            }
+            else {
+                temp.type = "password";
+            }
+        }
+
+</script>
+    <!-- END Login Container -->
+
+
+
+{% endblock %}

@@ -1,0 +1,54 @@
+{% extends "Admin_base.html" %} {% block content %}
+
+<!--////////////////////Created by Omkar G. Date - 17/8/2020 /////////////////////// -->
+
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="card">
+            <div class="card-header card-header-rose card-header-icon">
+              <div class="card-icon">
+                <i class="material-icons">assignment</i>
+              </div>
+              <h4 class="card-title">Users List</h4>
+            </div>
+            <div class="card-body">
+              <div class="table-responsive">
+                <table class="table">
+                  <thead>
+                    <tr>
+                      <th class="text-center">Sr No.</th>
+                      <th>Name</th>
+                      <th>Mobile Number</th>
+                      <th>Email ID</th>
+                      <th class="text-right">Actions</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+
+                  {% for user in list_user %}
+                    <tr>
+                      <td class="text-center"></td>
+                      <td>{{ user["name"] }}</td>
+                      <td>{{ user["mobile_no"] }}</td>
+                      <td>{{ user["email_id"] }}</td>
+                      <td class="td-actions text-right">
+                        <a href="/update_user/{{user.email_id}}" type="button" rel="tooltip" class="btn btn-success btn-link">
+                          <i class="material-icons">edit</i>
+                        </a>
+                        <a href="/delete_user/{{user.email_id}}" type="button" rel="tooltip" class="btn btn-danger btn-link">
+                          <i class="material-icons">close</i>
+                        </a>
+
+                      </td>
+                    </tr>
+{% endfor %}
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+{% endblock %}

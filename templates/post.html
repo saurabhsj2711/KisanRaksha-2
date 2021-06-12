@@ -1,0 +1,36 @@
+{% extends "base.html" %} {% block content %}
+
+<!--////////////////////Created by Omkar G. Date - 17/8/2020 /////////////////////// -->
+
+
+        <div id="page-content">
+        <!-- Start Blog Single -->
+		<section class="blog-single section">
+			<div class="container">
+				<div class="row">
+					<div class="col-2"></div>
+								<div class="col-8">
+									<div class="image">
+										<img src="{{ url_for('static', filename='posts/'+post.post_filename) }}" alt="#">
+									</div>
+									<div class="blog-detail">
+										<h2 class="blog-title">{{post.post_heading}}</h2>
+										<div class="blog-meta">
+											<span class="author"><a href="#"><i class="fa fa-user"></i>By {{post.post_author}}</a><a href="#"><i class="fa fa-calendar"></i>{{post.post_date}}</a></span>
+										</div>
+										<div class="content">
+											{{post.post_data}}
+										</div>
+									</div>
+
+								</div>
+					<div class="col-2"></div>
+							</div>
+					</div>
+
+
+		</section>
+		<!--/ End Blog Single -->
+        </div>
+
+{% endblock %}

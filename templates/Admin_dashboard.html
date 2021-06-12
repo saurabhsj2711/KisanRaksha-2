@@ -1,0 +1,202 @@
+{% extends "Admin_base.html" %} {% block content %}
+
+<!---------------------------Created By Omkar Gawali-------------------------------------->
+<div class="container-fluid">
+  <div class="row">
+    <div class=" col-md-6 ">
+      <div class="card card-stats">
+        <div class="card-header card-header-info card-header-icon">
+          <div class="card-icon">
+            <i class="material-icons">equalizer</i>
+          </div>
+          <p class="card-category">Website Visits</p>
+          <h3 class="card-title">{{count_views}}</h3>
+        </div>
+        <div class="card-footer">
+          <div class="stats">
+             <i class="material-icons">update</i> Just Updated
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-6">
+      <div class="card card-stats">
+        <div class="card-header card-header-warning card-header-icon">
+          <div class="card-icon">
+            <i class="material-icons">groups</i>
+          </div>
+          <p class="card-category">Users</p>
+          <h3 class="card-title">{{count_users}}</h3>
+        </div>
+        <div class="card-footer">
+          <div class="stats">
+            <i class="material-icons">update</i> Just Updated
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class=" col-md-6 ">
+      <div class="card card-stats">
+        <div class="card-header card-header-success card-header-icon">
+          <div class="card-icon">
+            <i class="material-icons">yard</i>
+          </div>
+          <p class="card-category">Plant added</p>
+          <h3 class="card-title">{{count_plants}}</h3>
+        </div>
+        <div class="card-footer">
+          <div class="stats">
+            <i class="material-icons">update</i> Just Updated
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class=" col-md-6">
+      <div class="card card-stats">
+        <div class="card-header card-header-rose card-header-icon">
+          <div class="card-icon">
+            <i class="material-icons">coronavirus</i>
+          </div>
+          <p class="card-category">Diseases added</p>
+          <h3 class="card-title">{{count_diseases}}</h3>
+        </div>
+        <div class="card-footer">
+          <div class="stats">
+            <i class="material-icons">update</i> Just Updated
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+<div class="row">
+  <div class=" col-md-6 ">
+    <div class="card card-stats">
+      <div class="card-header card-header-warning card-header-icon">
+        <div class="card-icon">
+          <i class="material-icons">image_search</i>
+        </div>
+        <p class="card-category">Successfull Predictions</p>
+        <h3 class="card-title">{{count_prediction}}</h3>
+      </div>
+      <div class="card-footer">
+        <div class="stats">
+          <i class="material-icons">update</i> Just Updated
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class=" col-md-6">
+    <div class="card card-stats">
+      <div class="card-header card-header-info card-header-icon">
+        <div class="card-icon">
+          <i class="material-icons">article</i>
+        </div>
+        <p class="card-category">Posts added</p>
+        <h3 class="card-title">{{count_posts}}</h3>
+      </div>
+      <div class="card-footer">
+        <div class="stats">
+          <i class="material-icons">update</i> Just Updated
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-md-4">
+    <div class="card card-chart">
+      <div class="card-header card-header-rose" data-header-animation="true">
+        <div class="ct-chart" id="websiteViewsChart"></div>
+      </div>
+      <div class="card-body">
+        <div class="card-actions">
+          <button type="button" class="btn btn-danger btn-link fix-broken-card">
+            <i class="material-icons">build</i> Fix Header!
+          </button>
+          <button type="button" class="btn btn-info btn-link" rel="tooltip" data-placement="bottom" title="Refresh">
+            <i class="material-icons">refresh</i>
+          </button>
+          <button type="button" class="btn btn-default btn-link" rel="tooltip" data-placement="bottom"
+            title="Change Date">
+            <i class="material-icons">edit</i>
+          </button>
+        </div>
+        <h4 class="card-title">Website Views</h4>
+        <p class="card-category">Last Campaign Performance</p>
+      </div>
+      <div class="card-footer">
+        <div class="stats">
+          <i class="material-icons">access_time</i> campaign sent 2 days ago
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-4">
+    <div class="card card-chart">
+      <div class="card-header card-header-success" data-header-animation="true">
+        <div class="ct-chart" id="dailySalesChart"></div>
+      </div>
+      <div class="card-body">
+        <div class="card-actions">
+          <button type="button" class="btn btn-danger btn-link fix-broken-card">
+            <i class="material-icons">build</i> Fix Header!
+          </button>
+          <button type="button" class="btn btn-info btn-link" rel="tooltip" data-placement="bottom" title="Refresh">
+            <i class="material-icons">refresh</i>
+          </button>
+          <button type="button" class="btn btn-default btn-link" rel="tooltip" data-placement="bottom"
+            title="Change Date">
+            <i class="material-icons">edit</i>
+          </button>
+        </div>
+        <h4 class="card-title">Daily Sales</h4>
+        <p class="card-category">
+          <span class="text-success"><i class="fa fa-long-arrow-up"></i> 55% </span> increase in today sales.
+        </p>
+      </div>
+      <div class="card-footer">
+        <div class="stats">
+          <i class="material-icons">access_time</i> updated 4 minutes ago
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-4">
+    <div class="card card-chart">
+      <div class="card-header card-header-info" data-header-animation="true">
+        <div class="ct-chart" id="completedTasksChart"></div>
+      </div>
+      <div class="card-body">
+        <div class="card-actions">
+          <button type="button" class="btn btn-danger btn-link fix-broken-card">
+            <i class="material-icons">build</i> Fix Header!
+          </button>
+          <button type="button" class="btn btn-info btn-link" rel="tooltip" data-placement="bottom" title="Refresh">
+            <i class="material-icons">refresh</i>
+          </button>
+          <button type="button" class="btn btn-default btn-link" rel="tooltip" data-placement="bottom"
+            title="Change Date">
+            <i class="material-icons">edit</i>
+          </button>
+        </div>
+        <h4 class="card-title">Completed Tasks</h4>
+        <p class="card-category">Last Campaign Performance</p>
+      </div>
+      <div class="card-footer">
+        <div class="stats">
+          <i class="material-icons">access_time</i> campaign sent 2 days ago
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+{% endblock %}
